@@ -1,7 +1,10 @@
 :root {
     --slate-600: #475569;
     --slate-300: #cbd5e1;
+    --slate-800: #1e293b;
     --neutral-50: #fafafa;
+    --gray-200: #e5e7eb;
+    --gray-400: #9ca3af;
     --font-style-poppins: 'Poppins', sans-serif;
 }
 
@@ -18,7 +21,6 @@ html, body {
     height: 100vh;
     overflow: hidden;
     font-family: var(--font-style-poppins);
-    /* border: 2px solid red; */
 }
 
 html {
@@ -28,8 +30,16 @@ html {
 .container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 30rem 4fr;
     grid-template-rows: 1fr 5fr;
+}
+
+.app-title {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: var(--neutral-50);
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    margin-top: 3rem;
 }
 
 nav {
@@ -40,7 +50,6 @@ nav {
     align-content: start;
     gap: 2rem;
     background-color: var(--slate-600);
-    border: 2px solid red;
 }
 
 ul, li, a {
@@ -51,12 +60,117 @@ ul, li, a {
     padding: 1rem;
 }
 
-i {
+nav i {
     margin-left: 2rem;
 }
 
 header {
-    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2rem 4rem 2rem;
+    row-gap: 2rem;
+}
+
+.top-header {
+    display: grid;
+    grid-template-columns: 4fr 30rem;
+    align-items: center;
+}
+
+.top-header i {
+    font-size: 1.8rem;
+}
+
+#search {
+    border-radius: 3rem;
+    outline: none;
+    border: none;
+    background-color: var(--gray-200);
+    width: 70rem;
+    padding: 1rem;
+    font-size: 1.5rem;  
+}
+
+.fa-magnifying-glass {
+    margin-right: 2rem;
+}
+
+.top-header-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 3rem;
+}
+
+.top-header-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fa-bell {
+    margin-right: 2rem;
+}
+
+.profile-pic-top {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.top-header-name {
+    font-size: 1.7rem;
+}
+
+.profile-pic-bottom {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.bottom-header {
+    display: grid;
+    grid-template-columns: 0fr 1fr 35rem;
+    padding-left: 3rem;
+}
+
+.bottom-header-left {
+    display: grid;
+    justify-content: start;
+    padding-left: 1.5rem;
+}
+
+.greeting {
+    font-size: 1.4rem;
+}
+
+.bottom-header-name {
+    font-size: 2rem;
+}
+
+.top-header-name,
+.greeting, 
+.bottom-header-name {
+    font-weight: bolder;
+}
+
+.bottom-header-right button {
+    padding: 1.2rem;
+    width: 10rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--slate-600);
+    color: var(--neutral-50);
+    font-size: 1.4rem;
+}
+
+.bottom-header-right {
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
 }
 
 main {
